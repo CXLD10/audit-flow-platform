@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export default function Login() {
-  return <div>Login page scaffolded for later frontend phases.</div>;
-=======
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ErrorState from "../components/ErrorState";
@@ -51,5 +47,4 @@ export default function Login() {
       {error ? <ErrorState message={error} /> : null}
     </div>
   );
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 }

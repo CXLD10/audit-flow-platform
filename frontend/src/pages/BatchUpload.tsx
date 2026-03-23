@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export default function BatchUpload() {
-  return <div>Batch upload page scaffolded for later frontend phases.</div>;
-=======
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -94,5 +90,4 @@ export default function BatchUpload() {
       </section>
     </div>
   );
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 }

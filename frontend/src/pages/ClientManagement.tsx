@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export default function ClientManagement() {
-  return <div>Client management page scaffolded for later frontend phases.</div>;
-=======
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { FormEvent, useMemo, useState } from "react";
 import { createClient, listClients } from "../api/clients";
@@ -82,5 +78,4 @@ export default function ClientManagement() {
       </div>
     </RoleGuard>
   );
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 }

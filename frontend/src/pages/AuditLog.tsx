@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export default function AuditLog() {
-  return <div>Audit log page scaffolded for later frontend phases.</div>;
-=======
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { apiClient } from "../api/client";
@@ -67,5 +63,4 @@ export default function AuditLog() {
       </div>
     </RoleGuard>
   );
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 }

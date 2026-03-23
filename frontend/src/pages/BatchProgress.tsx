@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export default function BatchProgress() {
-  return <div>Batch progress page scaffolded for later frontend phases.</div>;
-=======
 import { useMemo } from "react";
 import { NavLink, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
@@ -68,5 +64,4 @@ export default function BatchProgress() {
       </section>
     </div>
   );
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 }

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-export const authStore = {
-  token: null as string | null,
-  role: null as string | null,
-};
-=======
 import { create } from "zustand";
 import { AuthUser, UserRole } from "../types";
 
@@ -34,4 +28,3 @@ export const useAuthStore = create<AuthState>((set) => ({
     })),
   clearAuth: () => set({ token: "", role: "CA", email: "", userId: "", tenantId: "00000000-0000-0000-0000-000000000001" }),
 }));
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c

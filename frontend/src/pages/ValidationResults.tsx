@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export default function ValidationResults() {
-  return <div>Validation results page scaffolded for later frontend phases.</div>;
-=======
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -95,5 +91,4 @@ export default function ValidationResults() {
       </section>
     </div>
   );
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 }

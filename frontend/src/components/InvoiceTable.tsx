@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-export default function InvoiceTable() {
-  return <div>Invoice table component scaffolded for later frontend phases.</div>;
-}
-=======
 import { Fragment, memo, useMemo, useState } from "react";
 import ErrorBadge from "./ErrorBadge";
 import EmptyState from "./EmptyState";
@@ -141,4 +136,3 @@ function InvoiceTableComponent({ invoices, onResolve, canResolve = false, loadin
 
 const InvoiceTable = memo(InvoiceTableComponent);
 export default InvoiceTable;
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c

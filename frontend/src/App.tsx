@@ -9,22 +9,6 @@ import Login from "./pages/Login";
 import ReconciliationResults from "./pages/ReconciliationResults";
 import ValidationResults from "./pages/ValidationResults";
 import { useAuth } from "./hooks/useAuth";
-<<<<<<< HEAD
-
-const navigation = [
-  ["/", "Dashboard"],
-  ["/upload", "Upload"],
-  ["/progress", "Progress"],
-  ["/validation", "Validation"],
-  ["/reconciliation", "Reconciliation"],
-  ["/clients", "Clients"],
-  ["/audit", "Audit"],
-  ["/export", "Export"],
-];
-
-export default function App() {
-  const { token } = useAuth();
-=======
 import RoleGuard from "./components/RoleGuard";
 
 const navigation = [
@@ -40,37 +24,10 @@ const navigation = [
 
 export default function App() {
   const { token, role, email, tenantId, logout } = useAuth();
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 
   return (
     <div className="shell">
       <aside className="sidebar">
-<<<<<<< HEAD
-        <h1>Tax Compliance</h1>
-        <p>GST validation and reconciliation workspace.</p>
-        <nav>
-          {navigation.map(([path, label]) => (
-            <NavLink key={path} to={path} className={({ isActive }) => (isActive ? "active-link" : "") }>
-              {label}
-            </NavLink>
-          ))}
-        </nav>
-        <div className="token-state">{token ? "Authenticated" : "Anonymous"}</div>
-      </aside>
-      <main className="content">
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/upload" element={<BatchUpload />} />
-          <Route path="/progress" element={<BatchProgress />} />
-          <Route path="/validation" element={<ValidationResults />} />
-          <Route path="/reconciliation" element={<ReconciliationResults />} />
-          <Route path="/clients" element={<ClientManagement />} />
-          <Route path="/audit" element={<AuditLog />} />
-          <Route path="/export" element={<ExportPage />} />
-        </Routes>
-      </main>
-=======
         <div>
           <div className="eyebrow">GST Compliance</div>
           <h1>Audit Flow Platform</h1>
@@ -79,7 +36,7 @@ export default function App() {
         <nav>
           {navigation.map((item) => (
             <RoleGuard key={item.path} allow={[...item.roles]}>
-              <NavLink key={item.path} to={item.path} className={({ isActive }) => (isActive ? "active-link" : "") }>
+              <NavLink to={item.path} className={({ isActive }) => (isActive ? "active-link" : "")}>
                 {item.label}
               </NavLink>
             </RoleGuard>
@@ -114,7 +71,6 @@ export default function App() {
           </Routes>
         </main>
       </div>
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
     </div>
   );
 }

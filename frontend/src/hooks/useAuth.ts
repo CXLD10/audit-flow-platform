@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export function useAuth() {
-  return { role: null, token: null };
-=======
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { getMe, LoginPayload, login } from "../api/auth";
 import { useAuthStore } from "../state/authStore";
@@ -35,5 +31,4 @@ export function useAuth() {
     loginError: loginMutation.error,
     logout: store.clearAuth,
   };
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 }

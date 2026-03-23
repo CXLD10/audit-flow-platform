@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-export const apiClient = {
-  baseUrl: "/api/v1",
-};
-=======
 import axios from "axios";
 import { useAuthStore } from "../state/authStore";
 
@@ -21,4 +16,3 @@ apiClient.interceptors.request.use((config) => {
   config.headers["X-Tenant-Id"] = tenantId;
   return config;
 });
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c

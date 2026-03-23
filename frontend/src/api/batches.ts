@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export function listBatches() {
-  return Promise.resolve([]);
-=======
 import { apiClient } from "./client";
 import { BatchProgress, BatchRecord, BatchResultsResponse } from "../types";
 
@@ -48,5 +44,4 @@ export async function downloadBatchExport(batchId: string, type: "validation" | 
   link.click();
   link.remove();
   URL.revokeObjectURL(url);
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 }

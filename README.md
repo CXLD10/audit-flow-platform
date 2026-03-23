@@ -1,16 +1,5 @@
 # AI Tax Compliance System
 
-<<<<<<< HEAD
-This repository currently contains Phases 1-5 of the requested implementation:
-
-- monorepo structure
-- backend core and models
-- service layer
-- Celery worker pipeline
-- FastAPI API routes
-
-Frontend, deployment, migrations, and tests are intentionally deferred to later phases.
-=======
 A production-oriented GST compliance validation and reconciliation platform for CA firms and SMEs in India.
 
 ## Start here

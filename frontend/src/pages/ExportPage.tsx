@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export default function ExportPage() {
-  return <div>Export page scaffolded for later frontend phases.</div>;
-=======
 import { useMutation } from "@tanstack/react-query";
 import { useSearchParams } from "react-router-dom";
 import { downloadBatchExport } from "../api/batches";
@@ -34,5 +30,4 @@ export default function ExportPage() {
       </div>
     </RoleGuard>
   );
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 }

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export default function ReconciliationResults() {
-  return <div>Reconciliation results page scaffolded for later frontend phases.</div>;
-=======
 import { useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useSearchParams } from "react-router-dom";
@@ -92,5 +88,4 @@ export default function ReconciliationResults() {
       </section>
     </div>
   );
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 }

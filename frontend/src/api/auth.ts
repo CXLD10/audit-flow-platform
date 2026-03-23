@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export function login() {
-  return Promise.resolve(null);
-=======
 import { apiClient } from "./client";
 import { AuthUser } from "../types";
 
@@ -18,5 +14,4 @@ export async function login(payload: LoginPayload) {
 export async function getMe() {
   const response = await apiClient.get<AuthUser>("/auth/me");
   return response.data;
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 }
