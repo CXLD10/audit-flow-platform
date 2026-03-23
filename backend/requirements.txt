@@ -19,3 +19,7 @@ rapidfuzz==3.14.1
 httpx==0.28.1
 email-validator==2.2.0
 numpy==2.3.3
+<<<<<<< HEAD
+=======
+pytest==8.4.2
+>>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c

@@ -1,5 +1,9 @@
 from collections.abc import Callable
+<<<<<<< HEAD
 from datetime import UTC, datetime, timedelta
+=======
+from datetime import datetime, timezone, timedelta
+>>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
 from typing import Annotated, Any
 from uuid import UUID
 
@@ -47,7 +51,11 @@ def get_password_hash(password: str) -> str:
 
 
 def create_access_token(*, user_id: UUID, tenant_id: UUID, email: str, role: str) -> str:
+<<<<<<< HEAD
     expires_at = datetime.now(tz=UTC) + timedelta(minutes=settings.jwt_expire_minutes)
+=======
+    expires_at = datetime.now(tz=timezone.utc) + timedelta(minutes=settings.jwt_expire_minutes)
+>>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
     payload: dict[str, Any] = {
         "sub": str(user_id),
         "exp": expires_at,
