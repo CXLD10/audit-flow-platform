@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: tax-compliance-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: APP_ENV
+        value: production
+  - type: worker
+    name: tax-compliance-worker
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: celery -A app.workers.tasks worker --loglevel=info
+    envVars:
+      - key: APP_ENV
+        value: production
