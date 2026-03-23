@@ -1,3 +1,5 @@
+from uuid import UUID
+
 from app.models.audit_log import AuditLog
 from app.repositories.base import BaseRepository
 
@@ -5,8 +7,15 @@ from app.repositories.base import BaseRepository
 class AuditRepository(BaseRepository[AuditLog]):
     model = AuditLog
 
-    def write(self, **kwargs) -> AuditLog:
-        record = AuditLog(tenant_id=self.tenant_id, **kwargs)
+    def write(self, *, user_id: UUID | None, action_type: str, entity_type: str, entity_id: UUID, metadata: dict) -> AuditLog:
+        record = AuditLog(
+            tenant_id=self.tenant_id,
+            user_id=user_id,
+            action_type=action_type,
+            entity_type=entity_type,
+            entity_id=entity_id,
+            metadata_=metadata,
+        )
         self.db.add(record)
         return record
 

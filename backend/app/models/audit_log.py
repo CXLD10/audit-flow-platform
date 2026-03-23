@@ -13,4 +13,4 @@ class AuditLog(UUIDPrimaryKeyMixin, TenantScopedMixin, TimestampMixin, Base):
     action_type: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
     entity_type: Mapped[str] = mapped_column(String(100), nullable=False)
     entity_id: Mapped[UUID] = mapped_column(UUID(as_uuid=True), nullable=False, index=True)
-    metadata: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
+    metadata_: Mapped[dict] = mapped_column("metadata", JSONB, nullable=False, default=dict)
