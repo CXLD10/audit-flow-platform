@@ -1,3 +1,3 @@
-export default function ErrorBadge({ severity }: { severity: string }) {
-  return <span className={`badge ${severity}`}>{severity}</span>;
+export default function ErrorBadge() {
+  return <span>Error badge scaffolded for later frontend phases.</span>;
 }

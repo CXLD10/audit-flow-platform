@@ -1,10 +1,5 @@
 import { ReactNode } from "react";
-import { useAuthStore } from "../state/authStore";
 
-export default function RoleGuard({ children, allow }: { children: ReactNode; allow: string[] }) {
-  const role = useAuthStore((state) => state.role);
-  if (!allow.includes(role)) {
-    return null;
-  }
+export default function RoleGuard({ children }: { children: ReactNode }) {
   return <>{children}</>;
 }

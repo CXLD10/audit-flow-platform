@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from uuid import UUID
 
 from app.models.batch import UploadBatch
@@ -26,7 +26,7 @@ class BatchRepository(BaseRepository[UploadBatch]):
         batch.total_invoices = total_invoices
         batch.error_count = error_count
         batch.last_completed_stage = last_completed_stage
-        batch.completed_at = datetime.now(tz=timezone.utc)
+        batch.completed_at = datetime.now(tz=UTC)
         return batch
 
     def mark_failed(self, batch: UploadBatch, *, stage: str, error_message: str) -> UploadBatch:

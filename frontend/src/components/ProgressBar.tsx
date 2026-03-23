@@ -1,7 +1,3 @@
-export default function ProgressBar({ pct }: { pct: number }) {
-  return (
-    <div className="progress-shell" aria-label="Batch progress">
-      <div className="progress-bar" style={{ width: `${pct}%` }} />
-    </div>
-  );
+export default function ProgressBar() {
+  return <div>Progress bar component scaffolded for later frontend phases.</div>;
 }

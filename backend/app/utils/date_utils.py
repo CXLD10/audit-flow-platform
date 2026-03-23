@@ -1,4 +1,4 @@
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 
 SUPPORTED_DATE_FORMATS = ("%d/%m/%Y", "%Y-%m-%d", "%d-%m-%Y", "%d.%m.%Y")
 
@@ -21,7 +21,7 @@ def parse_date(value: object) -> date | None:
 
 
 def is_future(input_date: date) -> bool:
-    return input_date > datetime.now(tz=timezone.utc).date()
+    return input_date > datetime.now(tz=UTC).date()
 
 
 def financial_year_for(input_date: date) -> int:
