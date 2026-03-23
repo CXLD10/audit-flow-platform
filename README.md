@@ -63,4 +63,3 @@ Before testing uploads, start MinIO and create the `compliance-data` bucket as d
 - Frontend: Vercel
 
 Use `infra/render.yaml` as the starting Render artifact and `docs/setup-and-deployment.md` for the full deployment sequence and required environment variables.
->>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
