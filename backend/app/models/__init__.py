@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from app.models.audit_log import AuditLog
 from app.models.batch import UploadBatch
 from app.models.client import Client
@@ -25,3 +26,6 @@ __all__ = [
     "User",
     "ValidationErrorRecord",
 ]
+=======
+"""SQLAlchemy model package."""
+>>>>>>> 1a35cbb7ff30d77ac34b907e8d1807c54670719c
